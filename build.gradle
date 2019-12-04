@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    
+    repositories {
+
+        // read root local.properties file
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+        maven {
+            url properties.getProperty("nexus.mavenCentral")
+            credentials {
+                username properties.getProperty("nexus.username")
+                password properties.getProperty("nexus.pwd")
+            }
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.0'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+
+
+allprojects {
+    repositories {
+
+        // read root local.properties file
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+        maven {
+            url properties.getProperty("nexus.mavenCentral")
+            credentials {
+                username properties.getProperty("nexus.username")
+                password properties.getProperty("nexus.pwd")
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
