@@ -2,18 +2,8 @@
 buildscript {
     
     repositories {
-
-        // read root local.properties file
-        Properties properties = new Properties()
-        properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-        maven {
-            url properties.getProperty("nexus.mavenCentral")
-            credentials {
-                username properties.getProperty("nexus.username")
-                password properties.getProperty("nexus.pwd")
-            }
-        }
+        google()
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.0'
@@ -28,18 +18,8 @@ buildscript {
 
 allprojects {
     repositories {
-
-        // read root local.properties file
-        Properties properties = new Properties()
-        properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-        maven {
-            url properties.getProperty("nexus.mavenCentral")
-            credentials {
-                username properties.getProperty("nexus.username")
-                password properties.getProperty("nexus.pwd")
-            }
-        }
+        google()
+        jcenter()
     }
 }
 
