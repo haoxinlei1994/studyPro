@@ -1,1 +1,1 @@
-include ':app', ':1-scroller'
+include ':app', ':chapter-1-scroller'

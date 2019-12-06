@@ -9,7 +9,7 @@ import android.view.ViewConfiguration;
 import android.widget.Scroller;
 
 /**
- * 可以滑动，带有fling效果的textView
+ * 可以跟随手指滑动，带有fling效果的textView
  * Created by haoxinlei on 2019-12-03.
  */
 public class ScrollerTextView extends AppCompatTextView {
@@ -75,7 +75,9 @@ public class ScrollerTextView extends AppCompatTextView {
                 mLastY = event.getY();
                 break;
             case MotionEvent.ACTION_UP:
+                //速度的最大值mMaxV
                 mVelocityTracker.computeCurrentVelocity(1000, mMaxV);
+                //手指抬起的时候，计算此时的Y方向的速度
                 int vy = (int) mVelocityTracker.getYVelocity();
                 if (Math.abs(vy) > mMinV) {
                     mInitFlingY = getScrollY();
@@ -93,10 +95,17 @@ public class ScrollerTextView extends AppCompatTextView {
 
     @Override
     public void computeScroll() {
+        //计算当前时刻最新的坐标值，如果整个过程还没有结束，会返回true
         if (mScroller.computeScrollOffset()) {
+            //获取当前最新的Y坐标
             int currY = mScroller.getCurrY();
+            //用上一个时刻的Y坐标减去当前时刻的Y坐标得到一个差值
             int diff = mInitFlingY - currY;
+            //滚动内容
             scrollBy(0, diff);
+            //再次触发invalidate使View不断重绘，也就实现了在fling的整个过程中，随着时间的流逝
+            //View 不断的回调computeScroll方法 -> 获取新的坐标 -> 滚动内容 -> 再次出发重绘
+            //这样在视觉上就出现了fling的效果
             postInvalidate();
             mInitFlingY = mScroller.getCurrY();
         }
