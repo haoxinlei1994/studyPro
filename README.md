@@ -6,6 +6,7 @@
 博客地址： https://blog.csdn.net/haoxl1994/article/details/103429055
 
 <img src="./images/scroller.gif" width='150px'/>
+
 ## 2、 NestedScrollLayout
 或者叫做 StickyTabLayout ， 可以配合 RecyclerView、ViewPager、NestedScrollView、以及普通控件完成顶部吸附效果，整个布局均实现了触摸时跟随手指scroll 和 fling
 
