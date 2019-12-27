@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -48,7 +49,9 @@ public class AidlActivity extends AppCompatActivity {
             @Override
             public void onServiceConnected(ComponentName name, IBinder service) {
                 mAddInterface = Stub.asInterface(service);
-                Toast.makeText(AidlActivity.this, "远程服务连接成功", Toast.LENGTH_SHORT).show();
+                Toast toast = Toast.makeText(AidlActivity.this, "远程服务连接成功", Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
             }
 
             @Override
@@ -62,7 +65,9 @@ public class AidlActivity extends AppCompatActivity {
     private void performAdd() {
         if (mAddInterface != null) {
             int result = mAddInterface.add(1, 2);
-            Toast.makeText(AidlActivity.this, "1 + 2 = " + result, Toast.LENGTH_SHORT).show();
+            Toast toast = Toast.makeText(AidlActivity.this, "1 + 2 = " + result, Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
         }
     }
 

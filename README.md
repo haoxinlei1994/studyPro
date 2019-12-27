@@ -15,3 +15,12 @@
 效果图如下：
 
 <img src="./images/image_rv.gif" width='150px'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/image_vp_1.gif" width='150px'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/image_vp_2.gif" width='150px'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/image_ns.gif" width='150px'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/image_h_header.gif" width='150px'/>
+
+## 3、手撸一个 Aidl 跨进程通信
+安卓中跨进程通信是通过Binder。而我们在代码中使用Binder的方式就是定义一个 aidl 文件编译后会自动生成相应的 java 文件。这一章就是抛开 aidl 文件，动手写一个可以实现跨进程通信的demo。
+
+博客地址：waiting...
+
+效果图如下：
+
+<img src="./images/aidl.gif" width='150px' />
