@@ -7,9 +7,15 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/btn_scroller"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_scroller"
-        android:text="scroller"
-        />
+        android:text="scroller" />
+
+    <Button
+        android:id="@+id/btn_aidl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="aidl" />
 </LinearLayout>
