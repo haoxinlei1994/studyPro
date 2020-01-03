@@ -19,7 +19,7 @@
 ## 3、手撸一个 Aidl 跨进程通信
 安卓中跨进程通信是通过Binder。而我们在代码中使用Binder的方式就是定义一个 aidl 文件编译后会自动生成相应的 java 文件。这一章就是抛开 aidl 文件，动手写一个可以实现跨进程通信的demo。
 
-博客地址：waiting...
+博客地址：https://blog.csdn.net/haoxl1994/article/details/103816377
 
 效果图如下：
 
