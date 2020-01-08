@@ -24,3 +24,10 @@
 效果图如下：
 
 <img src="./images/aidl.gif" width='150px' />
+
+## 4、Metal Design
+使用 CoordinatorLayout、AppBarLayout、CollapsingToolbarLayout、TooBar 搭配 ViewPager、RecyclerView 实现日常工作中比较常见的两种场景需求。
+
+效果图如下：
+
+<img src="./images/md-viewpager.gif" width='150px' />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/md-collapsing.gif" width='150px' />

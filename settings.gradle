@@ -1,1 +1,1 @@
-include ':app', ':chapter-1-scroller', ':chapter-3-aidl'
+include ':app', ':chapter-1-scroller', ':chapter-3-aidl', ':chapter-4-metalDesign'

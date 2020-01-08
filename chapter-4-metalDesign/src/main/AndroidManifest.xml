@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mrh.chapter4">
+
+    <application>
+        <activity android:name=".CollapsingToolbarActivity"></activity>
+        <activity android:name=".AppBarActivity" />
+        <activity android:name=".MdActivity" />
+    </application>
+
+</manifest>

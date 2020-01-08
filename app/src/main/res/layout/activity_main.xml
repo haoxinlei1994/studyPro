@@ -10,6 +10,7 @@
         android:id="@+id/btn_scroller"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="scroller" />
 
     <Button
@@ -17,5 +18,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:textAllCaps="false"
         android:text="aidl" />
+
+    <Button
+        android:id="@+id/btn_md"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:text="Metal Design" />
 </LinearLayout>
