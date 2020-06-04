@@ -1,5 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'cusplugin'
 
+cusExtension {
+    name 'mrh'
+    hobby 'basketball'
+}
 android {
     compileSdkVersion 28
     buildToolsVersion "29.0.0"

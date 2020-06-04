@@ -4,22 +4,29 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven {
+            //cooker-plugin 所在的仓库
+            //这里是发布在本地文件夹了
+            url uri('./release')
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.0'
-        
-
+        classpath 'com.mrh.plugin:cusplugin:1.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
-
-
 allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            //cooker-plugin 所在的仓库
+            //这里是发布在本地文件夹了
+            url uri('./release')
+        }
     }
 }
 

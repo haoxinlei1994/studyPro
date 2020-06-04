@@ -1,1 +1,2 @@
 include ':app', ':chapter-1-scroller', ':chapter-3-aidl', ':chapter-4-metalDesign'
+include ':chapter-6-cusplugin'
